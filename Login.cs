@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
-//test
+//te
 namespace Quan_ly_quan_an
 {
     public partial class Login : Form
