@@ -60,11 +60,23 @@ namespace Quan_ly_quan_an
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            Main main = new Main();
+            this.Hide();
+            main.ShowDialog();
+            this.Show();
             if (cbRemember.Checked)
             {
                 Properties.Settings.Default.UserName = txtUserName.Text;
                 Properties.Settings.Default.PassWord = txtPassword.Text;
                 Properties.Settings.Default.Save();
+            }
+        }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát chương trình?", "Thông báo", MessageBoxButtons.YesNo) != System.Windows.Forms.DialogResult.Yes)
+            {
+                e.Cancel = true;
             }
         }
     }
