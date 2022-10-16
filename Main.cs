@@ -16,5 +16,12 @@ namespace Quan_ly_quan_an
         {
             InitializeComponent();
         }
+
+        private void quảnLýTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Account account = new Account() {  TopLevel = false, TopMost = true };
+            panel1.Controls.Add(account);
+            account.Show();
+        }
     }
 }
