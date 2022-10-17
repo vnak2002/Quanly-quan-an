@@ -12,6 +12,20 @@ namespace Quan_ly_quan_an
 {
     public partial class Main : Form
     {
+        private Form activeForm = null;
+        public void FormLoad(Form childForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(childForm);
+            childForm.Visible = true;
+        }
         public Main()
         {
             InitializeComponent();
@@ -19,16 +33,17 @@ namespace Quan_ly_quan_an
 
         private void quảnLýTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Account account = new Account() {  TopLevel = false, TopMost = true };
-            panel1.Controls.Add(account);
-            account.Show();
+            FormLoad(new Account());
         }
 
         private void doanhThuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Income income = new Income() { TopLevel = false, TopMost = true };
-            panel1.Controls.Add((income));
-            income.Show();
+            FormLoad(new Income());
+        }
+
+        private void thựcĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormLoad(new FoodMenu());
         }
     }
 }

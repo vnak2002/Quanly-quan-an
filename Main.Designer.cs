@@ -93,7 +93,7 @@
             this.quảnLýTàiKhoảnToolStripMenuItem,
             this.doanhThuToolStripMenuItem});
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
-            this.adminToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(67, 26);
             this.adminToolStripMenuItem.Text = "Admin";
             // 
             // thựcĐơnToolStripMenuItem
@@ -101,6 +101,7 @@
             this.thựcĐơnToolStripMenuItem.Name = "thựcĐơnToolStripMenuItem";
             this.thựcĐơnToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.thựcĐơnToolStripMenuItem.Text = "Thực đơn";
+            this.thựcĐơnToolStripMenuItem.Click += new System.EventHandler(this.thựcĐơnToolStripMenuItem_Click);
             // 
             // danhMụcToolStripMenuItem
             // 
