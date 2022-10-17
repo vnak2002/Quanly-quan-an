@@ -76,6 +76,11 @@ namespace Quan_ly_quan_an
                 e.Cancel = true;
             }
         }
+
+        private void tácVụToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormLoad(new Working());
+        }
     }
 }
 //
