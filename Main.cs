@@ -45,5 +45,15 @@ namespace Quan_ly_quan_an
         {
             FormLoad(new FoodMenu());
         }
+
+        private void danhMụcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormLoad(new Category());
+        }
+
+        private void bànToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormLoad(new Table());
+        }
     }
 }
