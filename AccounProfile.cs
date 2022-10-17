@@ -16,5 +16,10 @@ namespace Quan_ly_quan_an
         {
             InitializeComponent();
         }
+
+        private void AccounProfile_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

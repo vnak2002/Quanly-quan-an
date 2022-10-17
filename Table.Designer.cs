@@ -30,7 +30,7 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
-            this.pnFoodAdd = new System.Windows.Forms.Panel();
+            this.pnTableAdd = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -38,7 +38,7 @@
             this.pnFoodMenu = new System.Windows.Forms.Panel();
             this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.pnFoodAdd.SuspendLayout();
+            this.pnTableAdd.SuspendLayout();
             this.pnFoodMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,19 +63,19 @@
             this.label8.TabIndex = 12;
             this.label8.Text = "Tên bàn:";
             // 
-            // pnFoodAdd
+            // pnTableAdd
             // 
-            this.pnFoodAdd.Controls.Add(this.label1);
-            this.pnFoodAdd.Controls.Add(this.label8);
-            this.pnFoodAdd.Controls.Add(this.btnUpdate);
-            this.pnFoodAdd.Controls.Add(this.btnDelete);
-            this.pnFoodAdd.Controls.Add(this.btnAdd);
-            this.pnFoodAdd.Controls.Add(this.textBox4);
-            this.pnFoodAdd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnFoodAdd.Location = new System.Drawing.Point(566, 0);
-            this.pnFoodAdd.Name = "pnFoodAdd";
-            this.pnFoodAdd.Size = new System.Drawing.Size(559, 549);
-            this.pnFoodAdd.TabIndex = 19;
+            this.pnTableAdd.Controls.Add(this.label1);
+            this.pnTableAdd.Controls.Add(this.label8);
+            this.pnTableAdd.Controls.Add(this.btnUpdate);
+            this.pnTableAdd.Controls.Add(this.btnDelete);
+            this.pnTableAdd.Controls.Add(this.btnAdd);
+            this.pnTableAdd.Controls.Add(this.textBox4);
+            this.pnTableAdd.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnTableAdd.Location = new System.Drawing.Point(566, 0);
+            this.pnTableAdd.Name = "pnTableAdd";
+            this.pnTableAdd.Size = new System.Drawing.Size(559, 549);
+            this.pnTableAdd.TabIndex = 19;
             // 
             // label1
             // 
@@ -138,13 +138,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1125, 549);
-            this.Controls.Add(this.pnFoodAdd);
+            this.Controls.Add(this.pnTableAdd);
             this.Controls.Add(this.pnFoodMenu);
             this.Name = "Table";
             this.Text = "Table";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.pnFoodAdd.ResumeLayout(false);
-            this.pnFoodAdd.PerformLayout();
+            this.pnTableAdd.ResumeLayout(false);
+            this.pnTableAdd.PerformLayout();
             this.pnFoodMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -154,7 +154,7 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel pnFoodAdd;
+        private System.Windows.Forms.Panel pnTableAdd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;

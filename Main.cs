@@ -55,5 +55,13 @@ namespace Quan_ly_quan_an
         {
             FormLoad(new Table());
         }
+
+        private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormLoad(new AccounProfile());
+            AccounProfile acc = new AccounProfile();
+            
+            
+        }
     }
 }
