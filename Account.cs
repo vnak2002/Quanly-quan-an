@@ -26,7 +26,7 @@ namespace Quan_ly_quan_an
             adapter.SelectCommand = Command;
             table.Clear();
             adapter.Fill(table);
-            dataGridView1.DataSource = table;
+            dgvAccount.DataSource = table;
         }
         public Account()
         {
@@ -43,17 +43,17 @@ namespace Quan_ly_quan_an
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int i;
-            i = dataGridView1.CurrentRow.Index;
-            textBox1.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
-            textBox2.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-            comboBox1.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
+            i = dgvAccount.CurrentRow.Index;
+            txbUserName.Text = dgvAccount.Rows[i].Cells[0].Value.ToString();
+            txbDisplayName.Text = dgvAccount.Rows[i].Cells[1].Value.ToString();
+            cmbAccountType.Text = dgvAccount.Rows[i].Cells[2].Value.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                if (textBox1.Text == "" || textBox2.Text == "")
+                if (txbUserName.Text == "" || txbDisplayName.Text == "")
                 {
                     MessageBox.Show("Thiếu thông tin", " thông báo", MessageBoxButtons.OK);
                 }
@@ -61,7 +61,7 @@ namespace Quan_ly_quan_an
                 {
 
                     Command = Connection.CreateCommand();
-                    Command.CommandText = "insert into [Tài khoản]([Tên đăng nhập],[Tên hiển thị],[Loại tài khoản]) values('" + textBox1.Text + "',N'" + textBox2.Text + "',N'" + comboBox1.Text + "')";
+                    Command.CommandText = "insert into [Tài khoản]([Tên đăng nhập],[Tên hiển thị],[Loại tài khoản]) values('" + txbUserName.Text + "',N'" + txbDisplayName.Text + "',N'" + cmbAccountType.Text + "')";
                     Command.ExecuteNonQuery();
                     loaddata();
                     MessageBox.Show("Thêm thành công", " thông báo", MessageBoxButtons.OK);
@@ -81,7 +81,7 @@ namespace Quan_ly_quan_an
                 if (dr == DialogResult.Yes)
                 {
                     Command = Connection.CreateCommand();
-                    Command.CommandText = "delete from [Tài khoản] where [Tên đăng nhập] = '" + textBox1.Text + "'";
+                    Command.CommandText = "delete from [Tài khoản] where [Tên đăng nhập] = '" + txbUserName.Text + "'";
                     Command.ExecuteNonQuery();
                     loaddata();
                     MessageBox.Show("Xóa thành công", " thông báo", MessageBoxButtons.OK);
@@ -98,7 +98,7 @@ namespace Quan_ly_quan_an
         private void button3_Click(object sender, EventArgs e)
         {
             Command = Connection.CreateCommand();
-            Command.CommandText = "update [Tài khoản] set [Tên hiển thị] = N'" + textBox2.Text + "',[Loại tài khoản] = N'" + comboBox1.Text + "' where [Tên đăng nhập] = '" + textBox1.Text + "'";
+            Command.CommandText = "update [Tài khoản] set [Tên hiển thị] = N'" + txbDisplayName.Text + "',[Loại tài khoản] = N'" + cmbAccountType.Text + "' where [Tên đăng nhập] = '" + txbUserName.Text + "'";
             Command.ExecuteNonQuery();
         }
     }

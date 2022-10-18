@@ -42,6 +42,12 @@
     <Reference Include="DevExpress.XtraLayout.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraVerticalGrid.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -63,6 +69,9 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -116,8 +125,52 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Account.cs" />
+    <Compile Include="Model\AccountType.cs" />
+    <Compile Include="Model\Bill.cs" />
+    <Compile Include="Model\BillInfo.cs" />
+    <Compile Include="Model\CategoryFood.cs" />
+    <Compile Include="Model\Food.cs" />
+    <Compile Include="Model\Model1.cs" />
+    <Compile Include="Model\TableFood.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLQA\Account.cs">
+      <DependentUpon>QADbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLQA\AccountType.cs">
+      <DependentUpon>QADbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLQA\Bill.cs">
+      <DependentUpon>QADbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLQA\BillInfo.cs">
+      <DependentUpon>QADbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLQA\CategoryFood.cs">
+      <DependentUpon>QADbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLQA\Food.cs">
+      <DependentUpon>QADbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLQA\QADbContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QADbContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLQA\QADbContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QADbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLQA\QADbContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QADbContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="QLQA\TableFood.cs">
+      <DependentUpon>QADbContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Table.cs">
       <SubType>Form</SubType>
@@ -178,11 +231,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="QLQA\QADbContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QADbContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QLQA\QADbContext.edmx.diagram">
+      <DependentUpon>QADbContext.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="QLQA\QADbContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QADbContext.edmx</DependentUpon>
+      <LastGenOutput>QADbContext.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="QLQA\QADbContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QADbContext.edmx</DependentUpon>
+      <LastGenOutput>QADbContext.cs</LastGenOutput>
+    </Content>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -196,6 +266,9 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

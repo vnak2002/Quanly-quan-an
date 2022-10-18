@@ -32,11 +32,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.pnTableAdd = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtTableName = new System.Windows.Forms.TextBox();
             this.pnFoodMenu = new System.Windows.Forms.Panel();
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtIDTable = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnTableAdd.SuspendLayout();
             this.pnFoodMenu.SuspendLayout();
@@ -65,12 +67,14 @@
             // 
             // pnTableAdd
             // 
+            this.pnTableAdd.Controls.Add(this.label2);
+            this.pnTableAdd.Controls.Add(this.txtIDTable);
             this.pnTableAdd.Controls.Add(this.label1);
             this.pnTableAdd.Controls.Add(this.label8);
             this.pnTableAdd.Controls.Add(this.btnUpdate);
             this.pnTableAdd.Controls.Add(this.btnDelete);
             this.pnTableAdd.Controls.Add(this.btnAdd);
-            this.pnTableAdd.Controls.Add(this.textBox4);
+            this.pnTableAdd.Controls.Add(this.txtTableName);
             this.pnTableAdd.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnTableAdd.Location = new System.Drawing.Point(566, 0);
             this.pnTableAdd.Name = "pnTableAdd";
@@ -86,6 +90,16 @@
             this.label1.Size = new System.Drawing.Size(272, 140);
             this.label1.TabIndex = 13;
             this.label1.Text = "Table";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(453, 465);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(94, 72);
+            this.btnUpdate.TabIndex = 2;
+            this.btnUpdate.Text = "Sửa";
+            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
@@ -107,12 +121,12 @@
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // txtTableName
             // 
-            this.textBox4.Location = new System.Drawing.Point(203, 287);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(211, 22);
-            this.textBox4.TabIndex = 8;
+            this.txtTableName.Location = new System.Drawing.Point(203, 287);
+            this.txtTableName.Name = "txtTableName";
+            this.txtTableName.Size = new System.Drawing.Size(211, 22);
+            this.txtTableName.TabIndex = 8;
             // 
             // pnFoodMenu
             // 
@@ -123,15 +137,22 @@
             this.pnFoodMenu.Size = new System.Drawing.Size(571, 549);
             this.pnFoodMenu.TabIndex = 18;
             // 
-            // btnUpdate
+            // label2
             // 
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(453, 465);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(94, 72);
-            this.btnUpdate.TabIndex = 2;
-            this.btnUpdate.Text = "Sửa";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(59, 347);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 20);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Mã bàn:";
+            // 
+            // txtIDTable
+            // 
+            this.txtIDTable.Location = new System.Drawing.Point(203, 345);
+            this.txtIDTable.Name = "txtIDTable";
+            this.txtIDTable.Size = new System.Drawing.Size(211, 22);
+            this.txtIDTable.TabIndex = 14;
             // 
             // Table
             // 
@@ -158,8 +179,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTableName;
         private System.Windows.Forms.Panel pnFoodMenu;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtIDTable;
     }
 }

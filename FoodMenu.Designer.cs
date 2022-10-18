@@ -34,10 +34,14 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.pnFoodMenu = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtFoodName = new System.Windows.Forms.TextBox();
+            this.cbCategory = new System.Windows.Forms.ComboBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             this.pnFoodAdd = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txbSearch = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,11 +51,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pnMenulabel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnFoodMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnFoodAdd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnMenulabel.SuspendLayout();
             this.SuspendLayout();
@@ -97,10 +100,10 @@
             this.pnFoodMenu.Name = "pnFoodMenu";
             this.pnFoodMenu.Size = new System.Drawing.Size(501, 533);
             this.pnFoodMenu.TabIndex = 4;
-            this.pnFoodMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.pnFoodMenu_Paint);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -111,55 +114,91 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // textBox2
+            // txtFoodName
             // 
-            this.textBox2.Location = new System.Drawing.Point(173, 319);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(211, 22);
-            this.textBox2.TabIndex = 5;
+            this.txtFoodName.Location = new System.Drawing.Point(173, 319);
+            this.txtFoodName.Name = "txtFoodName";
+            this.txtFoodName.Size = new System.Drawing.Size(211, 22);
+            this.txtFoodName.TabIndex = 5;
             // 
-            // comboBox1
+            // cbCategory
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(173, 391);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(155, 24);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.Location = new System.Drawing.Point(173, 391);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(155, 24);
+            this.cbCategory.TabIndex = 6;
             // 
-            // textBox4
+            // txtPrice
             // 
-            this.textBox4.Location = new System.Drawing.Point(173, 356);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(211, 22);
-            this.textBox4.TabIndex = 8;
+            this.txtPrice.Location = new System.Drawing.Point(173, 356);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(211, 22);
+            this.txtPrice.TabIndex = 8;
             // 
             // pnFoodAdd
             // 
-            this.pnFoodAdd.Controls.Add(this.textBox1);
+            this.pnFoodAdd.Controls.Add(this.pictureBox2);
+            this.pnFoodAdd.Controls.Add(this.txbSearch);
+            this.pnFoodAdd.Controls.Add(this.txtID);
             this.pnFoodAdd.Controls.Add(this.label1);
             this.pnFoodAdd.Controls.Add(this.pictureBox1);
             this.pnFoodAdd.Controls.Add(this.label8);
             this.pnFoodAdd.Controls.Add(this.label7);
             this.pnFoodAdd.Controls.Add(this.label6);
-            this.pnFoodAdd.Controls.Add(this.comboBox1);
+            this.pnFoodAdd.Controls.Add(this.cbCategory);
             this.pnFoodAdd.Controls.Add(this.btnUpdate);
             this.pnFoodAdd.Controls.Add(this.btnDelete);
-            this.pnFoodAdd.Controls.Add(this.textBox2);
+            this.pnFoodAdd.Controls.Add(this.txtFoodName);
             this.pnFoodAdd.Controls.Add(this.btnAdd);
-            this.pnFoodAdd.Controls.Add(this.textBox4);
+            this.pnFoodAdd.Controls.Add(this.txtPrice);
             this.pnFoodAdd.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnFoodAdd.Location = new System.Drawing.Point(701, 0);
             this.pnFoodAdd.Name = "pnFoodAdd";
             this.pnFoodAdd.Size = new System.Drawing.Size(446, 533);
             this.pnFoodAdd.TabIndex = 10;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(111, 236);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(47, 21);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            // 
+            // txbSearch
+            // 
+            this.txbSearch.Location = new System.Drawing.Point(173, 236);
+            this.txbSearch.Name = "txbSearch";
+            this.txbSearch.Size = new System.Drawing.Size(211, 22);
+            this.txbSearch.TabIndex = 16;
+            this.txbSearch.TextChanged += new System.EventHandler(this.txbSearch_TextChanged);
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(173, 285);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(211, 22);
+            this.txtID.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(38, 287);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 20);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Mã món:";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(6, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(428, 246);
+            this.pictureBox1.Size = new System.Drawing.Size(428, 200);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
@@ -233,7 +272,6 @@
             this.label5.Size = new System.Drawing.Size(87, 87);
             this.label5.TabIndex = 14;
             this.label5.Text = "U";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // pnMenulabel
             // 
@@ -246,24 +284,6 @@
             this.pnMenulabel.Name = "pnMenulabel";
             this.pnMenulabel.Size = new System.Drawing.Size(200, 533);
             this.pnMenulabel.TabIndex = 15;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(38, 287);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 20);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Mã món:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(173, 285);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(211, 22);
-            this.textBox1.TabIndex = 15;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // FoodMenu
             // 
@@ -280,6 +300,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnFoodAdd.ResumeLayout(false);
             this.pnFoodAdd.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnMenulabel.ResumeLayout(false);
             this.pnMenulabel.PerformLayout();
@@ -293,9 +314,9 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Panel pnFoodMenu;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtFoodName;
+        private System.Windows.Forms.ComboBox cbCategory;
+        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Panel pnFoodAdd;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
@@ -307,7 +328,9 @@
         private System.Windows.Forms.Panel pnMenulabel;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox txbSearch;
     }
 }

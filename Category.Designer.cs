@@ -31,12 +31,14 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.pnCategory = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtCategoryName = new System.Windows.Forms.TextBox();
             this.pnFoodMenu = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtIDcategory = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnCategory.SuspendLayout();
             this.pnFoodMenu.SuspendLayout();
@@ -61,21 +63,33 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(120, 20);
             this.label8.TabIndex = 12;
-            this.label8.Text = "Tên đanh mục:";
+            this.label8.Text = "Tên danh mục:";
             // 
             // pnCategory
             // 
+            this.pnCategory.Controls.Add(this.label2);
+            this.pnCategory.Controls.Add(this.txtIDcategory);
             this.pnCategory.Controls.Add(this.label1);
             this.pnCategory.Controls.Add(this.label8);
             this.pnCategory.Controls.Add(this.btnUpdate);
             this.pnCategory.Controls.Add(this.btnDelete);
             this.pnCategory.Controls.Add(this.btnAdd);
-            this.pnCategory.Controls.Add(this.textBox4);
+            this.pnCategory.Controls.Add(this.txtCategoryName);
             this.pnCategory.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnCategory.Location = new System.Drawing.Point(577, 0);
             this.pnCategory.Name = "pnCategory";
             this.pnCategory.Size = new System.Drawing.Size(559, 533);
             this.pnCategory.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Papyrus", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(92, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(396, 126);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Category";
             // 
             // btnUpdate
             // 
@@ -107,12 +121,12 @@
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // txtCategoryName
             // 
-            this.textBox4.Location = new System.Drawing.Point(203, 287);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(211, 22);
-            this.textBox4.TabIndex = 8;
+            this.txtCategoryName.Location = new System.Drawing.Point(203, 287);
+            this.txtCategoryName.Name = "txtCategoryName";
+            this.txtCategoryName.Size = new System.Drawing.Size(211, 22);
+            this.txtCategoryName.TabIndex = 8;
             // 
             // pnFoodMenu
             // 
@@ -123,15 +137,22 @@
             this.pnFoodMenu.Size = new System.Drawing.Size(571, 533);
             this.pnFoodMenu.TabIndex = 16;
             // 
-            // label1
+            // label2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Papyrus", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(92, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(396, 126);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Category";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(64, 331);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 20);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Mã danh mục:";
+            // 
+            // txtIDcategory
+            // 
+            this.txtIDcategory.Location = new System.Drawing.Point(203, 331);
+            this.txtIDcategory.Name = "txtIDcategory";
+            this.txtIDcategory.Size = new System.Drawing.Size(211, 22);
+            this.txtIDcategory.TabIndex = 14;
             // 
             // Category
             // 
@@ -158,8 +179,10 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtCategoryName;
         private System.Windows.Forms.Panel pnFoodMenu;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtIDcategory;
     }
 }
