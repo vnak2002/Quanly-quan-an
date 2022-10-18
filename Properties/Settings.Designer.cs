@@ -58,5 +58,15 @@ namespace Quan_ly_quan_an.Properties {
                 this["s"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=AESIR\\SQLEXPRESS08;Initial Catalog=QLQA;Integrated Security=True")]
+        public string QLQAConnectionString {
+            get {
+                return ((string)(this["QLQAConnectionString"]));
+            }
+        }
     }
 }

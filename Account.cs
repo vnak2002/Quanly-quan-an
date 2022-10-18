@@ -16,7 +16,7 @@ namespace Quan_ly_quan_an
     {
         SqlConnection Connection;
         SqlCommand Command;
-        String str = @"Data Source=LAPTOP-TV4TO026\HAOADULOVE;Initial Catalog=QLQA;Integrated Security=True";
+        String str = @"Data Source=AESIR\SQLEXPRESS08;Initial Catalog=QLQA;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         void loaddata()
@@ -49,7 +49,22 @@ namespace Quan_ly_quan_an
             cmbAccountType.Text = dgvAccount.Rows[i].Cells[2].Value.ToString();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+       
+
+       
+
+        
+
+        private void Account_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'qLQADataSet.Tài_khoản' table. You can move, or remove it, as needed.
+            this.tài_khoảnTableAdapter.Fill(this.qLQADataSet.Tài_khoản);
+            Connection = new SqlConnection(str);
+            Connection.Open();
+            loaddata();
+        }
+
+        private void btnAdd_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -73,7 +88,7 @@ namespace Quan_ly_quan_an
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnDelete_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -95,7 +110,7 @@ namespace Quan_ly_quan_an
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnUpdate_Click_1(object sender, EventArgs e)
         {
             Command = Connection.CreateCommand();
             Command.CommandText = "update [Tài khoản] set [Tên hiển thị] = N'" + txbDisplayName.Text + "',[Loại tài khoản] = N'" + cmbAccountType.Text + "' where [Tên đăng nhập] = '" + txbUserName.Text + "'";

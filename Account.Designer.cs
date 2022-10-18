@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Account));
             this.dgvAccount = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -43,10 +44,15 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.qLQADataSet = new Quan_ly_quan_an.QLQADataSet();
+            this.tàiKhoảnBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tài_khoảnTableAdapter = new Quan_ly_quan_an.QLQADataSetTableAdapters.Tài_khoảnTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.qLQADataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tàiKhoảnBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvAccount
@@ -161,6 +167,7 @@
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Sửa";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // btnDelete
             // 
@@ -171,6 +178,7 @@
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             // 
             // btnAdd
             // 
@@ -181,6 +189,7 @@
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
             // 
             // panel2
             // 
@@ -190,6 +199,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(648, 570);
             this.panel2.TabIndex = 2;
+            // 
+            // qLQADataSet
+            // 
+            this.qLQADataSet.DataSetName = "QLQADataSet";
+            this.qLQADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tàiKhoảnBindingSource
+            // 
+            this.tàiKhoảnBindingSource.DataMember = "Tài khoản";
+            this.tàiKhoảnBindingSource.DataSource = this.qLQADataSet;
+            // 
+            // tài_khoảnTableAdapter
+            // 
+            this.tài_khoảnTableAdapter.ClearBeforeFill = true;
             // 
             // Account
             // 
@@ -201,11 +224,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Account";
             this.Text = "Account";
+            this.Load += new System.EventHandler(this.Account_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.qLQADataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tàiKhoảnBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -226,5 +252,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
+        private QLQADataSet qLQADataSet;
+        private System.Windows.Forms.BindingSource tàiKhoảnBindingSource;
+        private QLQADataSetTableAdapters.Tài_khoảnTableAdapter tài_khoảnTableAdapter;
     }
 }
